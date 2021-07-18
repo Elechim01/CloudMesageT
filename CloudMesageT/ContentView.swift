@@ -35,16 +35,16 @@ struct ContentView: View {
           print("sendMessageTouser()")
           let urlString = "https://fcm.googleapis.com/fcm/send"
           let url = NSURL(string: urlString)!
-//          let paramString: [String : Any] = [
-//            "to" : token,
-//            "notification" : ["title" : title, "body" : body,"sound":"default"],
-//            "data" : ["user" : "test_id"]
-//          ]
-        let paramString : [String: Any] = [
-            "to": "allDevices",
-            "notification" : ["title" : title, "body" : body],
+          let paramString: [String : Any] = [
+            "to" : token,
+            "notification" : ["title" : title, "body" : body,"sound":"default"],
             "data" : ["user" : "test_id"]
-            ]
+          ]
+//        let paramString : [String: Any] = [
+//            "to": "allDevices",
+//            "notification" : ["title" : title, "body" : body],
+//            "data" : ["user" : "test_id"]
+//            ]
         
           let request = NSMutableURLRequest(url: url as URL)
           request.httpMethod = "POST"
